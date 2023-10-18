@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://i.ytimg.com/vi/V_6hy3SCNt0/maxresdefault.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #333;
+        }
+        
+
+        .result-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        .predicted-class {
+            font-size: 24px;
+            color: #007bff;
+        }
+
+        .disease-name {
+            font-size: 20px;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        .info {
+            font-size: 16px;
+            color: orange;
+            margin-top: 5px;
+        }
+
+        .precautions {
+            font-size: 16px;
+            color: brown;
+            margin-top: 5px;
+        }
+
+        .fertilizers {
+            font-size: 16px;
+            color: green;
+            margin-top: 5px;
+        }
+        .p{
+            border: 1px solid black;
+            max-width: 600px;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 50px;
+            background-color: #FFFDD0;
+        }.Root_cause{
+            font-size: 16px;
+            color: #000080;
+            margin-top: 5px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+    
+        <h3>Image Prediction Result</h3>
+        <h1 class="Disease"><strong>Disease:</strong> <span class="predicted-class">{{ class_label }}</span></h1>
+    </div>
+        <div class="p">
+        <h2 class="disease-name">Disease Name: {{ disease_info.get("name", "") }}</h2>
+        <p class="info">Identification: {{ disease_info.get("Identification", "") }}</p>
+        <p class="Root_cause">Root Cause: {{ disease_info.get("Root_Cause", "") }}</p>
+        <p class="precautions">Precautions: {{ disease_info.get("Precautions", "") }}</p>
+        <p class="fertilizers">Fertilizers/Actions to manage: {{ disease_info.get("Fertilizers", "") }}</p>
+        </div>
+   
+</body>
+</html>
